@@ -10,12 +10,32 @@
 # failures cascade into each other, and can they recover?
 
 # %%
+import os
+import glob
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
 pd.set_option("display.max_columns", None)
 
-DATA = "../data"
+
+def find_data_dir():
+    """Locate the data directory whether running locally (repo layout,
+    notebooks/ next to data/) or on Kaggle (dataset mounted under
+    /kaggle/input, either as /kaggle/input/<slug>/ or with the CSVs
+    flattened directly under /kaggle/input/<slug>)."""
+    candidates = ["../data", "data"]
+    candidates += glob.glob("/kaggle/input/*")
+    for c in candidates:
+        if os.path.exists(os.path.join(c, "tasks.csv")):
+            return c
+    raise FileNotFoundError(
+        "Could not locate tasks.csv under any of: " + ", ".join(candidates)
+    )
+
+
+DATA = find_data_dir()
+print(f"Using data directory: {DATA}")
 tasks = pd.read_csv(f"{DATA}/tasks.csv")
 agents = pd.read_csv(f"{DATA}/agents.csv")
 tools = pd.read_csv(f"{DATA}/tools.csv")

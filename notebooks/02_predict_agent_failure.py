@@ -26,6 +26,9 @@
 # are known before the run starts.
 
 # %%
+import os
+import glob
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -41,7 +44,24 @@ from sklearn.metrics import (
     roc_auc_score, confusion_matrix, ConfusionMatrixDisplay,
 )
 
-DATA = "../data"
+
+def find_data_dir():
+    """Locate the data directory whether running locally (repo layout,
+    notebooks/ next to data/) or on Kaggle (dataset mounted under
+    /kaggle/input, either as /kaggle/input/<slug>/ or with the CSVs
+    flattened directly under /kaggle/input/<slug>)."""
+    candidates = ["../data", "data"]
+    candidates += glob.glob("/kaggle/input/*")
+    for c in candidates:
+        if os.path.exists(os.path.join(c, "tasks.csv")):
+            return c
+    raise FileNotFoundError(
+        "Could not locate tasks.csv under any of: " + ", ".join(candidates)
+    )
+
+
+DATA = find_data_dir()
+print(f"Using data directory: {DATA}")
 tasks = pd.read_csv(f"{DATA}/tasks.csv")
 agents = pd.read_csv(f"{DATA}/agents.csv")
 runs = pd.read_csv(f"{DATA}/agent_runs.csv")
