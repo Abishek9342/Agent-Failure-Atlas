@@ -47,16 +47,19 @@ from sklearn.metrics import (
 
 def find_data_dir():
     """Locate the data directory whether running locally (repo layout,
-    notebooks/ next to data/) or on Kaggle (dataset mounted under
-    /kaggle/input, either as /kaggle/input/<slug>/ or with the CSVs
-    flattened directly under /kaggle/input/<slug>)."""
-    candidates = ["../data", "data"]
-    candidates += glob.glob("/kaggle/input/*")
-    for c in candidates:
+    notebooks/ next to data/) or on Kaggle (dataset mounted somewhere
+    under /kaggle/input -- the exact depth varies, e.g.
+    /kaggle/input/<slug>/ or /kaggle/input/datasets/<user>/<slug>/ -- so
+    search recursively rather than assuming a fixed depth)."""
+    for c in ["../data", "data"]:
         if os.path.exists(os.path.join(c, "tasks.csv")):
             return c
+    matches = glob.glob("/kaggle/input/**/tasks.csv", recursive=True)
+    if matches:
+        return os.path.dirname(matches[0])
     raise FileNotFoundError(
-        "Could not locate tasks.csv under any of: " + ", ".join(candidates)
+        "Could not locate tasks.csv under ../data, data, or anywhere "
+        "under /kaggle/input (searched recursively)."
     )
 
 
