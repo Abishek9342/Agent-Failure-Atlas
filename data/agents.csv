@@ -1,0 +1,11 @@
+agent_id,model,model_family,provider,framework,configuration,temperature,tool_policy,capability_tier,execution_mode
+agent_01,gpt-4.1-class-a,gpt-4.1,sim-openai,react-loop,default,0.2,auto,high,synthetic_simulation
+agent_02,gpt-4.1-class-a,gpt-4.1,sim-openai,react-loop,cautious,0.0,auto,high,synthetic_simulation
+agent_03,claude-sonnet-cls,claude,sim-anthropic,react-loop,default,0.2,auto,high,synthetic_simulation
+agent_04,claude-haiku-cls,claude,sim-anthropic,react-loop,default,0.2,auto,medium,synthetic_simulation
+agent_05,llama-70b-class,llama,sim-meta,function-call,default,0.3,auto,medium,synthetic_simulation
+agent_06,gpt-4.1-mini-cls,gpt-4.1,sim-openai,function-call,fast,0.4,required,low,synthetic_simulation
+agent_07,claude-sonnet-cls,claude,sim-anthropic,plan-execute,planner,0.2,auto,high,synthetic_simulation
+agent_08,mixtral-8x7b-cls,mixtral,sim-mistral,react-loop,default,0.3,auto,low,synthetic_simulation
+agent_09,gpt-4.1-class-a,gpt-4.1,sim-openai,plan-execute,planner,0.1,auto,high,synthetic_simulation
+agent_10,llama-8b-class,llama,sim-meta,function-call,fast,0.4,required,low,synthetic_simulation

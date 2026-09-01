@@ -1,0 +1,26 @@
+evidence_id,run_id,task_id,source_type,claim,relevance,supports_claim,contradicts_claim
+run_000001_ev01,run_000001,task_00001,tool_output,Claim 1 derived from document_analysis trajectory for run_000001.,0.906,True,False
+run_000001_ev02,run_000001,task_00001,retrieved_document,Claim 2 derived from document_analysis trajectory for run_000001.,0.955,True,False
+run_000002_ev01,run_000002,task_00001,tool_output,Claim 1 derived from document_analysis trajectory for run_000002.,0.744,False,False
+run_000002_ev02,run_000002,task_00001,retrieved_document,Claim 2 derived from document_analysis trajectory for run_000002.,0.859,True,False
+run_000002_ev03,run_000002,task_00001,tool_output,Claim 3 derived from document_analysis trajectory for run_000002.,0.791,True,False
+run_000002_ev04,run_000002,task_00001,tool_output,Claim 4 derived from document_analysis trajectory for run_000002.,0.967,True,False
+run_000002_ev05,run_000002,task_00001,retrieved_document,Claim 5 derived from document_analysis trajectory for run_000002.,0.892,True,False
+run_000003_ev01,run_000003,task_00001,retrieved_document,Claim 1 derived from document_analysis trajectory for run_000003.,0.737,True,False
+run_000003_ev02,run_000003,task_00001,retrieved_document,Claim 2 derived from document_analysis trajectory for run_000003.,0.531,True,False
+run_000004_ev01,run_000004,task_00002,retrieved_document,Claim 1 derived from rag trajectory for run_000004.,0.629,True,False
+run_000004_ev02,run_000004,task_00002,tool_output,Claim 2 derived from rag trajectory for run_000004.,0.585,True,False
+run_000004_ev03,run_000004,task_00002,tool_output,Claim 3 derived from rag trajectory for run_000004.,0.51,True,False
+run_000004_ev04,run_000004,task_00002,retrieved_document,Claim 4 derived from rag trajectory for run_000004.,0.965,True,False
+run_000005_ev01,run_000005,task_00003,retrieved_document,Claim 1 derived from file_operations trajectory for run_000005.,0.601,True,False
+run_000005_ev02,run_000005,task_00003,tool_output,Claim 2 derived from file_operations trajectory for run_000005.,0.911,True,False
+run_000006_ev01,run_000006,task_00003,tool_output,Claim 1 derived from file_operations trajectory for run_000006.,0.724,True,False
+run_000006_ev02,run_000006,task_00003,tool_output,Claim 2 derived from file_operations trajectory for run_000006.,0.881,True,False
+run_000006_ev03,run_000006,task_00003,api_response,Claim 3 derived from file_operations trajectory for run_000006.,0.996,True,False
+run_000006_ev04,run_000006,task_00003,retrieved_document,Claim 4 derived from file_operations trajectory for run_000006.,0.546,True,False
+run_000007_ev01,run_000007,task_00003,retrieved_document,Claim 1 derived from file_operations trajectory for run_000007.,0.833,True,False
+run_000007_ev02,run_000007,task_00003,api_response,Claim 2 derived from file_operations trajectory for run_000007.,0.639,True,False
+run_000007_ev03,run_000007,task_00003,api_response,Claim 3 derived from file_operations trajectory for run_000007.,0.934,True,False
+run_000007_ev04,run_000007,task_00003,retrieved_document,Claim 4 derived from file_operations trajectory for run_000007.,0.649,True,False
+run_000008_ev01,run_000008,task_00004,tool_output,Claim 1 derived from planning trajectory for run_000008.,0.893,False,True
+run_000008_ev02,run_000008,task_00004,tool_output,Claim 2 derived from planning trajectory for run_000008.,0.769,False,True

@@ -1,0 +1,26 @@
+recovery_id,failure_id,run_id,recovery_attempt_number,recovery_attempted,recovery_strategy,recovery_trigger,recovery_steps,recovery_success,recovery_latency_ms,recovery_token_cost,final_outcome
+run_000001_f01_r01,run_000001_f01,run_000001,1,True,verify_result,step_status=error at run_000001_s011,2,True,10324,990,success
+run_000002_f01_r01,run_000002_f01,run_000002,1,True,change_execution_strategy,step_status=error at run_000002_s005,1,True,2001,557,success
+run_000008_f01_r01,run_000008_f01,run_000008,1,True,use_additional_evidence,step_status=error at run_000008_s004,1,True,5503,103,success
+run_000008_f02_r01,run_000008_f02,run_000008,1,True,verify_result,step_status=error at run_000008_s020r,3,True,5976,309,success
+run_000008_f03_r01,run_000008_f03,run_000008,1,True,replan,step_status=error at run_000008_s022r,2,False,4756,1102,partial_success
+run_000008_f04_r01,run_000008_f04,run_000008,1,True,verify_result,step_status=error at run_000008_s012,2,False,2512,612,failed
+run_000009_f01_r01,run_000009_f01,run_000009,1,True,retry,step_status=error at run_000009_s005,1,True,1355,121,success
+run_000009_f02_r01,run_000009_f02,run_000009,1,True,replan,step_status=error at run_000009_s016,2,False,6468,1048,partial_success
+run_000009_f03_r01,run_000009_f03,run_000009,1,True,verify_result,step_status=error at run_000009_s021r,1,False,7179,188,partial_success
+run_000009_f03_r02,run_000009_f03,run_000009,2,True,use_additional_evidence,prior recovery attempt 1 failed,1,True,4461,348,success
+run_000010_f01_r01,run_000010_f01,run_000010,1,True,verify_result,step_status=error at run_000010_s003,1,True,4259,444,success
+run_000011_f01_r01,run_000011_f01,run_000011,1,True,rollback,step_status=error at run_000011_s013,3,True,18783,1224,success
+run_000011_f02_r01,run_000011_f02,run_000011,1,True,replan,step_status=error at run_000011_s020r,2,True,10954,444,success
+run_000011_f03_r01,run_000011_f03,run_000011,1,True,verify_result,step_status=error at run_000011_s021r,1,True,2228,91,success
+run_000012_f01_r01,run_000012_f01,run_000012,0,False,,,0,False,0,0,failed
+run_000016_f01_r01,run_000016_f01,run_000016,1,True,use_additional_evidence,step_status=error at run_000016_s004,1,False,1854,462,partial_success
+run_000016_f02_r01,run_000016_f02,run_000016,1,True,ask_for_clarification,step_status=error at run_000016_s007,1,False,7761,197,failed
+run_000018_f01_r01,run_000018_f01,run_000018,1,True,ask_for_clarification,step_status=error at run_000018_s001,1,False,2700,199,partial_success
+run_000018_f02_r01,run_000018_f02,run_000018,1,True,rollback,step_status=error at run_000018_s004,3,True,14583,204,success
+run_000018_f03_r01,run_000018_f03,run_000018,1,True,change_execution_strategy,step_status=error at run_000018_s008,1,False,3107,182,partial_success
+run_000018_f03_r02,run_000018_f03,run_000018,2,True,alternative_tool,prior recovery attempt 1 failed,3,True,19506,411,success
+run_000018_f04_r01,run_000018_f04,run_000018,1,True,replan,step_status=error at run_000018_s027r,1,True,1297,340,success
+run_000019_f01_r01,run_000019_f01,run_000019,1,True,retry,step_status=error at run_000019_s002,1,True,4836,383,success
+run_000019_f02_r01,run_000019_f02,run_000019,1,True,replan,step_status=error at run_000019_s020r,2,True,13554,786,success
+run_000019_f03_r01,run_000019_f03,run_000019,1,True,rollback,step_status=error at run_000019_s006,1,True,1490,463,success

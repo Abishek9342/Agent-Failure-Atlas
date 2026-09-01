@@ -1,0 +1,26 @@
+run_id,step_id,sequence_number,action_type,tool_name,tool_input,tool_output,observation,decision_category,step_status
+run_000001,run_000001_s001,1,plan,,,,Step 1: planning step.,planning,ok
+run_000001,run_000001_s002,2,tool_call,validator,"{value: '<step_2_result>', constraints: 'normalized'}","{valid: true, checked: 7}",Step 2 (execution): 'validator' returned a typical result set.,execution,ok
+run_000001,run_000001_s003,3,tool_call,validator,"{value: '<step_3_result>', constraints: 'deduplicated'}","{valid: true, checked: 3}",Step 3 (execution): 'validator' returned a small result set.,execution,ok
+run_000001,run_000001_s004,4,tool_call,doc_retriever,"{query: 'document analysis deduplicated', top_k: 7}","{results: 22 items, avg_relevance: 0.6}",Step 4 (execution): 'doc_retriever' returned a large result set.,execution,ok
+run_000001,run_000001_s005,5,tool_call,validator,"{value: '<step_5_result>', constraints: 'region-filtered'}","{valid: true, checked: 7}",Step 5 (retrieval): 'validator' returned a typical result set.,retrieval,ok
+run_000001,run_000001_s006,6,tool_call,file_reader,{path: '/data/document_analysis/top-N.csv'},{content_length_kb: 28},Step 6 (execution): 'file_reader' returned a typical result set.,execution,ok
+run_000001,run_000001_s007,7,tool_call,file_reader,{path: '/data/document_analysis/time-windowed.csv'},{content_length_kb: 28},Step 7 (retrieval): 'file_reader' returned a typical result set.,retrieval,ok
+run_000001,run_000001_s008,8,tool_call,file_reader,{path: '/data/document_analysis/region-filtered.csv'},{content_length_kb: 28},Step 8 (retrieval): 'file_reader' returned a typical result set.,retrieval,ok
+run_000001,run_000001_s009,9,tool_call,validator,"{value: '<step_9_result>', constraints: 'deduplicated'}","{valid: true, checked: 22}",Step 9 (tool_selection): 'validator' returned a large result set.,tool_selection,ok
+run_000001,run_000001_s010,10,tool_call,file_reader,{path: '/data/document_analysis/last_quarter.csv'},{content_length_kb: 88},Step 10 (tool_selection): 'file_reader' returned a large result set.,tool_selection,ok
+run_000001,run_000001_s011,11,correct,validator,"{value: '<step_11_result>', constraints: 'normalized'}","{valid: true, checked: 7}",Failure detected: constraint_violation (reasoning).,correction,recovered
+run_000001,run_000001_s015r,12,correct,validator,"{recovery_strategy: 'verify_result', attempt: 1}",{result: 'recovery_attempt'},Recovery attempt 1 (step 1/2) using strategy 'verify_result'.,correction,ok
+run_000001,run_000001_s016r,13,correct,validator,"{recovery_strategy: 'verify_result', attempt: 1}",{result: 'recovery_attempt'},Recovery attempt 1 (step 2/2) using strategy 'verify_result'.,correction,recovered
+run_000001,run_000001_s012,14,tool_call,file_reader,{path: '/data/document_analysis/time-windowed.csv'},{content_length_kb: 28},Step 12 (tool_selection): 'file_reader' returned a typical result set.,tool_selection,ok
+run_000001,run_000001_s013,15,verify,file_reader,{path: '/data/document_analysis/region-filtered.csv'},{content_length_kb: 12},Step 13 (verification): 'file_reader' returned a small result set.,verification,ok
+run_000001,run_000001_s014,16,finalize,,,,Step 14: finalization step.,finalization,ok
+run_000002,run_000002_s001,1,plan,,,,Step 1: planning step.,planning,ok
+run_000002,run_000002_s002,2,tool_call,file_reader,{path: '/data/document_analysis/raw.csv'},{content_length_kb: 12},Step 2 (execution): 'file_reader' returned a small result set.,execution,ok
+run_000002,run_000002_s003,3,tool_call,file_reader,{path: '/data/document_analysis/top-N.csv'},{content_length_kb: 88},Step 3 (execution): 'file_reader' returned a large result set.,execution,ok
+run_000002,run_000002_s004,4,tool_call,validator,"{value: '<step_4_result>', constraints: 'top-N'}","{valid: true, checked: 7}",Step 4 (execution): 'validator' returned a typical result set.,execution,ok
+run_000002,run_000002_s005,5,tool_call,file_reader,{path: '/data/document_analysis/raw.csv'},{content_length_kb: 12},Failure detected: tool_misuse (tool_use).,tool_selection,recovered
+run_000002,run_000002_s013r,6,correct,file_reader,"{recovery_strategy: 'change_execution_strategy', attempt: 1}",{result: 'recovery_attempt'},Recovery attempt 1 (step 1/1) using strategy 'change_execution_strategy'.,correction,recovered
+run_000002,run_000002_s006,7,tool_call,doc_retriever,"{query: 'document analysis last quarter', top_k: 3}","{results: 0 items, avg_relevance: 0.89}",Step 6 (retrieval): 'doc_retriever' returned a empty result set.,retrieval,ok
+run_000002,run_000002_s007,8,tool_call,doc_retriever,"{query: 'document analysis last quarter', top_k: 5}","{results: 7 items, avg_relevance: 0.92}",Step 7 (execution): 'doc_retriever' returned a typical result set.,execution,ok
+run_000002,run_000002_s008,9,tool_call,doc_retriever,"{query: 'document analysis cross-referenced', top_k: 9}","{results: 22 items, avg_relevance: 0.54}",Step 8 (retrieval): 'doc_retriever' returned a large result set.,retrieval,ok

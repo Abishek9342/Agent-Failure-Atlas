@@ -1,0 +1,9 @@
+[project]
+name = "agent-failure-atlas-2026"
+version = "1.0.0"
+description = "Multi-Step AI Agent Trajectories for Failure, Recovery & Tool-Use Analysis"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

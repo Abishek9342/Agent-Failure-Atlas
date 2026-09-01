@@ -1,0 +1,11 @@
+tool_name,tool_category,description,input_schema,output_schema,risk_level
+web_search,search,Full-text search over a simulated web index.,"{query: string, top_k: int}","{results: [{title, snippet, url}]}",low
+doc_retriever,retrieval,Dense retrieval over a fixed document corpus.,"{query: string, top_k: int}","{chunks: [{doc_id, text, score}]}",low
+sql_query,database,Read-only query against a tabular data store.,{sql: string},"{rows: [object], row_count: int}",medium
+calculator,calculator,Evaluates a numeric expression.,{expression: string},{value: number},low
+code_executor,code_execution,Runs a short Python snippet in a sandbox.,{code: string},"{stdout: string, stderr: string, exit_code: int}",medium
+file_reader,file_operation,Reads the contents of a named file.,{path: string},{content: string},low
+file_writer,file_operation,Writes content to a named file.,"{path: string, content: string}",{success: bool},high
+api_client,API,Calls a named external REST API endpoint.,"{endpoint: string, params: object}","{status: int, body: object}",medium
+browser,browser,Navigates to a URL and extracts visible text.,{url: string},{text: string},medium
+validator,validation,Checks a value against a declared constraint set.,"{value: object, constraints: object}","{valid: bool, violations: [string]}",low

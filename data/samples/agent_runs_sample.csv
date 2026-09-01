@@ -1,0 +1,26 @@
+run_id,task_id,agent_id,run_number,start_time,end_time,latency_ms,input_tokens,output_tokens,total_tokens,tool_call_count,unique_tools_used,available_tool_count,failure_count,final_status,final_answer
+run_000001,task_00001,agent_06,1,2026-06-01T00:06:13+00:00,2026-06-01T00:06:54.382000+00:00,41382,4763,3686,8449,14,3,3,1,success,Completed document_analysis task with 14 tool calls.
+run_000002,task_00001,agent_04,2,2026-06-01T00:15:53+00:00,2026-06-01T00:16:27.925000+00:00,34925,4971,2827,7798,11,3,3,1,success,Completed document_analysis task with 11 tool calls.
+run_000003,task_00001,agent_03,3,2026-06-01T00:23:51+00:00,2026-06-01T00:24:05.022000+00:00,14022,3630,1425,5055,7,3,3,0,success,Completed document_analysis task with 7 tool calls.
+run_000004,task_00002,agent_09,1,2026-06-01T00:26:27+00:00,2026-06-01T00:26:37.661000+00:00,10661,2501,780,3281,4,3,3,0,success,Completed rag task with 4 tool calls.
+run_000005,task_00003,agent_04,1,2026-06-01T00:32:47+00:00,2026-06-01T00:32:55.962000+00:00,8962,2299,1133,3432,4,3,4,0,success,Completed file_operations task with 4 tool calls.
+run_000006,task_00003,agent_03,2,2026-06-01T00:35:19+00:00,2026-06-01T00:35:34.868000+00:00,15868,1632,1331,2963,5,4,4,0,success,Completed file_operations task with 5 tool calls.
+run_000007,task_00003,agent_01,3,2026-06-01T00:44:29+00:00,2026-06-01T00:44:43.259000+00:00,14259,2114,1135,3249,4,3,4,0,success,Completed file_operations task with 4 tool calls.
+run_000008,task_00004,agent_03,1,2026-06-01T00:48:00+00:00,2026-06-01T00:49:15.539000+00:00,75539,9124,6407,15531,25,3,3,4,failed,Attempted planning task; final status = failed.
+run_000009,task_00004,agent_10,2,2026-06-01T00:56:59+00:00,2026-06-01T00:58:13.028000+00:00,74028,8989,6081,15070,22,3,3,3,partial_success,Attempted planning task; final status = partial_success.
+run_000010,task_00004,agent_07,3,2026-06-01T01:04:22+00:00,2026-06-01T01:04:57.465000+00:00,35465,4894,3062,7956,12,3,3,1,success,Completed planning task with 12 tool calls.
+run_000011,task_00004,agent_09,4,2026-06-01T01:10:13+00:00,2026-06-01T01:11:39.039000+00:00,86039,8134,5543,13677,21,3,3,3,success,Completed planning task with 21 tool calls.
+run_000012,task_00005,agent_02,1,2026-06-01T01:11:22+00:00,2026-06-01T01:11:34.584000+00:00,12584,2182,1153,3335,4,3,4,1,failed,Attempted structured_extraction task; final status = failed.
+run_000013,task_00005,agent_04,2,2026-06-01T01:21:04+00:00,2026-06-01T01:21:14.203000+00:00,10203,2267,1299,3566,4,2,4,0,success,Completed structured_extraction task with 4 tool calls.
+run_000014,task_00005,agent_06,3,2026-06-01T01:26:32+00:00,2026-06-01T01:26:43.015000+00:00,11015,1478,1005,2483,3,3,4,0,success,Completed structured_extraction task with 3 tool calls.
+run_000015,task_00005,agent_08,4,2026-06-01T01:36:18+00:00,2026-06-01T01:36:28.830000+00:00,10830,2097,765,2862,4,3,4,0,success,Completed structured_extraction task with 4 tool calls.
+run_000016,task_00006,agent_07,1,2026-06-01T01:40:05+00:00,2026-06-01T01:40:54.874000+00:00,49874,6111,3924,10035,17,3,3,2,failed,Attempted structured_extraction task; final status = failed.
+run_000017,task_00006,agent_01,2,2026-06-01T01:48:01+00:00,2026-06-01T01:48:31.441000+00:00,30441,4513,2314,6827,13,3,3,0,success,Completed structured_extraction task with 13 tool calls.
+run_000018,task_00006,agent_04,3,2026-06-01T01:54:02+00:00,2026-06-01T01:55:56.222000+00:00,114222,8556,5099,13655,27,3,3,4,partial_success,Attempted structured_extraction task; final status = partial_success.
+run_000019,task_00007,agent_10,1,2026-06-01T01:54:52+00:00,2026-06-01T01:55:53.327000+00:00,61327,8362,5231,13593,21,3,3,4,failed,Attempted file_operations task; final status = failed.
+run_000020,task_00007,agent_05,2,2026-06-01T01:59:48+00:00,2026-06-01T02:01:01.148000+00:00,73148,7028,5485,12513,19,3,3,4,partial_success,Attempted file_operations task; final status = partial_success.
+run_000021,task_00007,agent_07,3,2026-06-01T02:01:08+00:00,2026-06-01T02:02:21.543000+00:00,73543,7215,3709,10924,21,3,3,2,partial_success,Attempted file_operations task; final status = partial_success.
+run_000022,task_00007,agent_06,4,2026-06-01T02:01:47+00:00,2026-06-01T02:02:14.455000+00:00,27455,4809,2378,7187,12,3,3,1,failed,Attempted file_operations task; final status = failed.
+run_000023,task_00008,agent_08,1,2026-06-01T02:03:38+00:00,2026-06-01T02:03:49.308000+00:00,11308,1464,934,2398,3,2,4,0,success,Completed rag task with 3 tool calls.
+run_000024,task_00008,agent_04,2,2026-06-01T02:04:33+00:00,2026-06-01T02:04:48.079000+00:00,15079,2611,901,3512,4,3,4,0,success,Completed rag task with 4 tool calls.
+run_000025,task_00008,agent_09,3,2026-06-01T02:13:42+00:00,2026-06-01T02:13:55.226000+00:00,13226,2840,1457,4297,6,4,4,0,success,Completed rag task with 6 tool calls.
